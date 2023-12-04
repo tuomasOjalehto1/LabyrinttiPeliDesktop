@@ -9,10 +9,10 @@ public class LabyrinttiLuojaScript : MonoBehaviour
     private LabyrinttiSolu _LabyrinttiSoluPrefab;
 
     [SerializeField]
-    private int _labyrinttiLeveys;
+    public int _labyrinttiLeveys;
 
     [SerializeField]
-    private int _labyrinttiSyvyys;
+    public int _labyrinttiSyvyys;
 
     private LabyrinttiSolu[,] _labyrinttiRuudukko;
 
