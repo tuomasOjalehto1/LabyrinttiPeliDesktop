@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e8d093ae8ecc9547804000032b7302f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _vasenSeina: {instanceID: 0}
+  - _oikeaSeina: {instanceID: 0}
+  - _etuSeina: {instanceID: 0}
+  - _takaSeina: {instanceID: 0}
+  - _vierailematonSeina: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

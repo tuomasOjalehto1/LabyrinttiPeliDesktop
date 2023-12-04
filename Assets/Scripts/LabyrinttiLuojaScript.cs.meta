@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 2c9066c33c2d3294a95f932bae4cda28
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _LabyrinttiSoluPrefab: {fileID: 414789049568183182, guid: 35b9cef52e76a94448a2bc4bf9d8fdb1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
