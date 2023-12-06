@@ -6,14 +6,18 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 public class KeraamisScript : MonoBehaviour
 {
     public int countTO = 0;
-
+    public GameObject partikkeli;
     public void OnTriggerEnter(Collider other)
     {
+        GameObject PartikkeliValiObjekti = Instantiate(partikkeli, other.gameObject.transform.position, Quaternion.identity); other.gameObject.SetActive(false);
+
+
         if (other.gameObject.CompareTag("PickUp1") || other.gameObject.CompareTag("PickUp2"))
         {
-            other.gameObject.SetActive(false);
+            Debug.Log("Menit sis‰‰n");
             //Laskuri pisteille
             countTO = countTO + 1;
+            Destroy(PartikkeliValiObjekti, 1f);
             //SetCountText();
         }
 
