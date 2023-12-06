@@ -25,15 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
-        if(Input.GetKeyUp(KeyCode.H))
-        {
-            TakeDamage(Random.Range(5, 10));
-        }
-
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            RestoreHealth(Random.Range(5, 10));
-        }
+       
     }
 
     public void UpdateHealthUI()
@@ -66,17 +58,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        lerpTimer = 0f;
-    }
-
-    public void RestoreHealth(float healAmount)
-    {
-        health += healAmount;
-        lerpTimer = 0f;
-    }
+    
 
 
 }
