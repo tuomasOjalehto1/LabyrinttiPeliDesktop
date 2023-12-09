@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Unity.AI.Navigation;
 
 public class LabyrinttiLuojaScript : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class LabyrinttiLuojaScript : MonoBehaviour
         }
 
         LuoLabyrintti(null, _labyrinttiRuudukko[0,0]);
+        GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
     private void LuoLabyrintti(LabyrinttiSolu edellinenSolu, LabyrinttiSolu nykyinenSolu)
