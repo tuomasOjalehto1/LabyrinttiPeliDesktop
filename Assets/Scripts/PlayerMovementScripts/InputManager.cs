@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     //Class variabelit scripteille
-    private PlayerInputFPS playerInput;
+    public PlayerInputFPS playerInput;
     private PlayerInputFPS.OnFootActions onFoot;
 
     private PlayerMotor motor;

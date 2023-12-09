@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,12 +26,12 @@ public class PlayerHealth : MonoBehaviour
     {
         health = Mathf.Clamp(health, 0, maxHealth);
         UpdateHealthUI();
-       
+
     }
 
     public void UpdateHealthUI()
     {
-        Debug.Log(health);
+        //Debug.Log(health);
 
         //P‰ivitt‰‰ enkkapalkin alasp‰in
         float fillF = frontHealthBar.fillAmount;
@@ -48,17 +49,22 @@ public class PlayerHealth : MonoBehaviour
         //Ja toiseen suuntaan
         if (fillB < hFraction)
         {
-            
+
             backHealthBar.color = Color.green;
             backHealthBar.fillAmount = hFraction;
             lerpTimer += Time.deltaTime;
-            float percentComplete = lerpTimer/ chipSpeed;
+            float percentComplete = lerpTimer / chipSpeed;
             percentComplete = percentComplete * percentComplete;
             frontHealthBar.fillAmount = Mathf.Lerp(fillF, backHealthBar.fillAmount, percentComplete);
         }
+
+
+
     }
 
-    
-
-
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        lerpTimer = 0f;
+    }
 }
