@@ -15,7 +15,7 @@ public class LabyrinttiLuojaScript : MonoBehaviour
     [SerializeField]
     public int _labyrinttiSyvyys;
 
-    private LabyrinttiSolu[,] _labyrinttiRuudukko;
+    public LabyrinttiSolu[,] _labyrinttiRuudukko;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +37,7 @@ public class LabyrinttiLuojaScript : MonoBehaviour
         }
 
         LuoLabyrintti(null, _labyrinttiRuudukko[0,0]);
+        //tekee navmeshin kun kenttä on luotu
         GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 

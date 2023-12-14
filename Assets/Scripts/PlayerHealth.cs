@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -19,6 +20,9 @@ public class PlayerHealth : MonoBehaviour
     public Image overlay; //DamageOVarlay objekti
     public float kesto; //kauan kest‰‰
     public float fadeSpeed;//KUinka kauan menee hiipua
+
+    public GameObject gameOverCanvas;
+    public GameObject peliCanvas;
 
 
     private float kestoLaskuri;
@@ -44,6 +48,14 @@ public class PlayerHealth : MonoBehaviour
                 tempAlpha -= Time.deltaTime * fadeSpeed;
                 overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, tempAlpha);
             }
+        }
+
+        if(health <= 0)
+        {
+            Time.timeScale = 0;
+
+            peliCanvas.SetActive(false);
+            gameOverCanvas.SetActive(true);
         }
     }
 

@@ -5,6 +5,8 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class KeraamisScript : MonoBehaviour
 {
+    public UI ui;
+
     public int countTO = 0;
     public GameObject partikkeli;
     public void OnTriggerEnter(Collider other)
@@ -17,6 +19,7 @@ public class KeraamisScript : MonoBehaviour
             Debug.Log("Menit sis‰‰n");
             //Laskuri pisteille
             countTO = countTO + 1;
+            //ui.timantit += 1;
             Destroy(PartikkeliValiObjekti, 1f);
             //SetCountText();
         }
@@ -26,7 +29,7 @@ public class KeraamisScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ui = GetComponent<UI>();
     }
 
     // Update is called once per frame

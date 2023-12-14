@@ -12,6 +12,8 @@ public class PlayerInteract : MonoBehaviour
     private LayerMask mask; //Muuttuja sille minkälainen layeri kyseessä
     private PlayerUI playerUI;
     private InputManager inputManager;
+    public Interactable currentInteractable;
+    public bool osuukoSadeInterractableen = false;
 
 
 
@@ -36,6 +38,8 @@ public class PlayerInteract : MonoBehaviour
         {
             if(hitInfo.collider.GetComponent<Interactable>() != null) 
             {
+                osuukoSadeInterractableen = true;
+                currentInteractable = hitInfo.collider.GetComponent<Interactable>();
                 //Debug.Log("Interactabale elementti löydetty");
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
                 //Debug.Log(hitInfo.collider.GetComponent<Interactable>().promptMessage);
