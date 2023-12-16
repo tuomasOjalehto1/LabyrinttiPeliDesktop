@@ -19,6 +19,7 @@ TagManager:
   - PickUp1
   - PickUp2
   - CinemachineTarget
+  - Zombie
   layers:
   - Default
   - TransparentFX

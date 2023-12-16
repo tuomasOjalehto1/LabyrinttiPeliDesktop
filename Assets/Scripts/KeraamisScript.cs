@@ -23,6 +23,10 @@ public class KeraamisScript : MonoBehaviour
             Destroy(PartikkeliValiObjekti, 1f);
             //SetCountText();
         }
+        else
+        {
+            return;
+        }
 
     }
 
